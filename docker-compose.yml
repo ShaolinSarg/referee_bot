@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+
+  referee_bot:
+    build: ./
+    image: referee_bot_clj
+
+    ports:
+      - "3000:3000"
