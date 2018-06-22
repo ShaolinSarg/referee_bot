@@ -20,7 +20,6 @@
                                                         (mock/json-body {:name "paperly" :url "http://..."}))))
       )
 
-    ;; (testing "return the right content type"
-    ;;   (are [expected actual] (= (:headers actual) expected)
-    ;;     "application/json" (mock/request :get "/players")))
-      ))
+    (testing "return the right content type"
+      (is (= "application/json"
+             (get-in (sut/app (mock/request :get "/players")) [:headers "Content-Type"]))))))
