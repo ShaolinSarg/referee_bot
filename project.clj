@@ -13,11 +13,13 @@
                  [com.taoensso/timbre "4.10.0"]
                  [metrics-clojure "2.10.0"]
                  [metrics-clojure-ring "2.10.0"]
-                 [cheshire "5.8.0"]]
+                 [cheshire "5.8.0"]
+                 [clj-http "3.9.0"]]
 
   :plugins [[lein-ring "0.12.4"]]
 
   :ring {:handler referee-bot.web/app}
-  
+
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                                  [ring/ring-mock "0.3.2"]]}})
+                                  [ring/ring-mock "0.3.2"]
+                                  [clj-http-fake "1.0.3"]]}})
