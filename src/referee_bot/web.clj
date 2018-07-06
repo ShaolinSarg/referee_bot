@@ -1,3 +1,4 @@
+
 (ns referee-bot.web
   (:require [cheshire.core :as json]
             [compojure.core :refer [defroutes GET POST]]
@@ -9,7 +10,7 @@
             [metrics.ring.expose :refer [expose-metrics-as-json]]
             [metrics.ring.instrument :refer [instrument]]
             [referee-bot.metrics :as metrics]))
-            
+
 
 (defn- register-player
   [request]
@@ -31,7 +32,6 @@
 
   (resources "/")
   (not-found "Not Found"))
-
 
 (def app
   (-> app-routes
